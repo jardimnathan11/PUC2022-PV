@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  puc:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: ["Rscript", "/data/script.R"]
+    volumes:
+      - ./:/data
